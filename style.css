@@ -1,0 +1,254 @@
+body{
+    background-color: rgba(14, 42, 94, 0.966);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #8EC5FC;
+    background-image: linear-gradient(62deg, #8EC5FC 0%, #E0C3FC 100%);
+}
+
+
+@media (max-width: 600px) {
+    .players{
+        flex-direction: row;
+        gap: 30px;
+        scale: 0.9;
+        position: relative;
+        top: 50px;
+    }
+
+    .player {
+        position: relative;
+        bottom: 50px;
+        
+    }
+
+    .boxParent {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    
+}
+
+h1 {
+    display: flex;
+    justify-content: center;
+    color: black;
+    font-size: 4rem;
+    
+}
+
+.boxParent {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 70vh;
+}
+
+.box {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 80px;
+    height: 500px;
+    width: 800px;
+    max-width: 100%;
+    min-width: 300px;
+    border: 3px solid black;
+    border-radius: 10px;
+    padding: 20px;
+    margin: 0 auto;
+    min-height: 400px;
+    
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+@media (max-width: 800px) {
+    .box {
+        width: 90%;
+        padding: 40px;
+        height: 4400px;
+    }
+    
+}
+
+.player {
+    flex-direction: row;
+    text-align: center;
+    color: black;
+    font-size: 1.5rem;
+    font-weight: bold;
+    align-items: center;
+}
+
+.result {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-self: center;
+    color: black;
+    margin-top: -30px;
+    font-size: 3rem;
+}
+
+.dice {
+border-radius: 20px; 
+box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
+    /* Smooth drop shadow */
+    border-radius: 10px;
+    /* Optional: Rounded corners for a smoother look */
+    transition: box-shadow 0.3s ease-in-out;
+}
+
+.dice:hover {
+    box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.5);
+    /* Stronger shadow on hover */
+}
+
+
+.players {
+    display: flex;
+    margin-top: 70px;
+    gap: 100px;
+    transform: scale(1.1);
+    
+}
+
+.refresh {
+    display: inline-block;
+    /* Makes it behave like a button */
+    background: linear-gradient(45deg, #ff416c, #ff4b2b);
+    /* Gradient background */
+    color: white;
+    /* White text */
+    font-size: 2rem;
+    /* Increase font size */
+    font-weight: bold;
+    /* Bold text */
+    padding: 15px 30px;
+    /* Padding to make it look like a button */
+    border-radius: 10px;
+    /* Rounded corners */
+    text-align: center;
+    /* Center text */
+    cursor: pointer;
+    /* Make it look clickable */
+    transition: all 0.3s ease-in-out;
+    /* Smooth hover effect */
+    border: none;
+    /* Remove border */
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    margin-bottom: 2rem;
+    /* Soft shadow */
+}
+
+/* Hover effect */
+.refresh:hover {
+    background: linear-gradient(45deg, #ff4b2b, #ff416c);
+    /* Reverse gradient */
+    transform: scale(1.1);
+    /* Slightly enlarge */
+    box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.3);
+    /* Stronger shadow */
+}
+
+/* Active (when clicked) */
+.refresh:active {
+    transform: scale(1.05);
+    /* Slightly shrink when clicked */
+    box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+
+
+@keyframes bounce {
+
+    0%, 100% {transform: scale(1);}
+    50% {transform: scale(1.2);}
+    
+}
+
+.winner-animation {
+    animation: bounce 0.5s ease-in-out  2;
+}
+
+
+@keyframes textAnimation {
+    0% {transform: scale(1);}
+    50% {transform: scale(1.1);}
+}
+
+.winnerText {
+    animation: textAnimation 0.8s ease-in-out  2 ;
+}
+
+.scoreBox {
+    background-color: white;
+    text-align: center;
+    border-radius: 5px;
+    width: 70%;
+    margin: 0 auto;
+}
+
+.reset {
+    display: inline-block;
+    /* Makes it behave like a button */
+    background: linear-gradient(45deg, #ff416c, #ff4b2b);
+    /* Gradient background */
+    color: white;
+    /* White text */
+    font-size: 2rem;
+    /* Increase font size */
+    font-weight: bold;
+    /* Bold text */
+    padding: 15px 30px;
+    /* Padding to make it look like a button */
+    border-radius: 10px;
+    /* Rounded corners */
+    text-align: center;
+    /* Center text */
+    cursor: pointer;
+    /* Make it look clickable */
+    transition: all 0.3s ease-in-out;
+    /* Smooth hover effect */
+    border: none;
+    /* Remove border */
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    margin-bottom: 2rem;
+    /* Soft shadow */
+}
+
+/* Hover effect */
+.reset:hover {
+    background: linear-gradient(45deg, #ff4b2b, #ff416c);
+    /* Reverse gradient */
+    transform: scale(1.1);
+    /* Slightly enlarge */
+    box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.3);
+    /* Stronger shadow */
+}
+
+/* Active (when clicked) */
+.reset:active {
+    transform: scale(1.05);
+    /* Slightly shrink when clicked */
+    box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+
+.button-container{
+    display: flex;
+    gap: 40px;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+
+
